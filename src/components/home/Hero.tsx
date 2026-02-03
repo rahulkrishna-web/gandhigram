@@ -96,23 +96,24 @@ const Hero = () => {
                         x: { type: "tween", ease: "easeInOut", duration: 0.8 },
                         opacity: { duration: 0.2 }
                     }}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    onDragEnd={(e, { offset, velocity }) => {
+                        const swipe = Math.abs(offset.x) * velocity.x;
+                        if (swipe < -10000) {
+                            paginate(1);
+                        } else if (swipe > 10000) {
+                            paginate(-1);
+                        }
+                    }}
                     style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
                 >
                     <div className={styles.overlay} />
                 </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Arrows */}
-            <div className={`${styles.arrowButton} ${styles.prevButton}`} onClick={() => paginate(-1)}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </div>
-            <div className={`${styles.arrowButton} ${styles.nextButton}`} onClick={() => paginate(1)}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </div>
+
 
             {/* Navigation Dots */}
             <div className={styles.dotsContainer}>

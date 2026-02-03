@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './SponsorWidget.module.css';
 
 interface SponsorData {
@@ -41,13 +42,15 @@ const SponsorWidget = () => {
                     </button>
                 ))}
             </div>
-            <ul className={styles.sponsorList}>
-                {currentSponsors.map((sponsor, index) => (
-                    <li key={index} className={styles.sponsorItem}>
-                        {sponsor}
-                    </li>
-                ))}
-            </ul>
+            <div className={styles.sponsorContent} style={{ display: 'flex', justifyContent: 'center', padding: '2rem 0', minHeight: '120px', alignItems: 'center' }}>
+                <Image
+                    src="/sponsors/Sanmina_Corporation_logo.svg"
+                    alt="Sanmina Corporation"
+                    width={200}
+                    height={80}
+                    style={{ objectFit: 'contain' }}
+                />
+            </div>
         </div>
     );
 };

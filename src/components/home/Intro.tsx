@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Users, BookOpen } from 'lucide-react';
 import styles from './Intro.module.css';
 
 const Intro = () => {
@@ -7,9 +8,8 @@ const Intro = () => {
             <div className={styles.container}>
                 <div className={styles.column}>
                     <div className={styles.card}>
-                        <div className={styles.imageWrapper}>
-                            {/* Placeholder for About Us Image */}
-                            <div className={styles.placeholderImg}></div>
+                        <div className={styles.imageWrapper} style={{ display: 'grid', placeItems: 'center', background: 'var(--bg-secondary)' }}>
+                            <Users size={64} color="var(--accent-gold)" strokeWidth={1.5} />
                         </div>
                         <div className={styles.content}>
                             <h2 className={styles.title}>About Us</h2>
@@ -24,9 +24,8 @@ const Intro = () => {
 
                 <div className={styles.column}>
                     <div className={styles.card}>
-                        <div className={styles.imageWrapper}>
-                            {/* Placeholder for Legacy Image */}
-                            <div className={styles.placeholderImg}></div>
+                        <div className={styles.imageWrapper} style={{ display: 'grid', placeItems: 'center', background: 'var(--bg-secondary)' }}>
+                            <BookOpen size={64} color="var(--accent-gold)" strokeWidth={1.5} />
                         </div>
                         <div className={styles.content}>
                             <h2 className={styles.title}>Our Legacy</h2>

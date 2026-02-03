@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
@@ -17,7 +18,14 @@ const Header = () => {
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Link href="/" onClick={closeMenu}>
-                        Gandhigram
+                        <Image
+                            src="/gandhigram_logo.png"
+                            alt="Gandhigram"
+                            width={150}
+                            height={40}
+                            className={styles.logoImage}
+                            priority
+                        />
                     </Link>
                 </div>
 

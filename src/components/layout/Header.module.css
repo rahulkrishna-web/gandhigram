@@ -18,12 +18,15 @@
 }
 
 .logo a {
-    font-family: var(--font-serif);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: -0.025em;
+}
+
+.logoImage {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
 }
 
 .navList {
@@ -104,16 +107,6 @@
     color: var(--bg-primary) !important;
 }
 
-@media (max-width: 768px) {
-    .desktopNav {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -146,6 +139,16 @@
 
 .bar.open:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* Mobile Nav Overlay */

@@ -1,15 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import styles from './DonorCarousel.module.css';
 
 // Mock donors or placeholders
 const donors = [
-    { id: 1, name: "TATA Trusts" },
-    { id: 2, name: "HCL Foundation" },
-    { id: 3, name: "Azim Premji Philanthropic Initiatives" },
-    { id: 4, name: "Infosys Foundation" },
-    { id: 5, name: "GiveIndia" },
-    { id: 6, name: "Tech Mahindra Foundation" },
+    { id: 1, name: "Sanmina Corporation", logo: "/sponsors/Sanmina_Corporation_logo.svg" },
 ];
 
 const DonorCarousel = () => {
@@ -17,23 +13,25 @@ const DonorCarousel = () => {
         <section className={styles.section}>
             <div className={styles.container}>
                 <h3 className={styles.title}>Our Partners & Supporters</h3>
-                <div className={styles.carouselWrapper}>
+                <div className={styles.carouselWrapper} style={{ display: 'flex', justifyContent: 'center' }}>
                     <motion.div
                         className={styles.track}
-                        animate={{ x: ["0%", "-50%"] }}
-                        transition={{
-                            repeat: Infinity,
-                            type: "tween",
-                            ease: "linear",
-                            duration: 20
-                        }}
+                        style={{ width: 'auto', transform: 'none' }}
                     >
-                        {/* Duplicate lists for seamless loop */}
-                        {[...donors, ...donors].map((donor, index) => (
+                        {donors.map((donor, index) => (
                             <div key={index} className={styles.card}>
                                 <div className={styles.logoPlaceholder}>
-                                    {/* Replace with <Image> when logos are available */}
-                                    <span className={styles.donorName}>{donor.name}</span>
+                                    {donor.logo ? (
+                                        <Image
+                                            src={donor.logo}
+                                            alt={donor.name}
+                                            width={200}
+                                            height={80}
+                                            style={{ objectFit: 'contain', maxHeight: '80px', width: 'auto' }}
+                                        />
+                                    ) : (
+                                        <span className={styles.donorName}>{donor.name}</span>
+                                    )}
                                 </div>
                             </div>
                         ))}

@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import styles from './Volunteer.module.css';
 
 const VolunteerAnimation = () => {
     const heartPath = "M100 35 C 75 5 25 25 25 65 C 25 105 100 165 100 165 C 100 165 175 105 175 65 C 175 25 125 5 100 35 Z";
@@ -33,7 +34,7 @@ const VolunteerAnimation = () => {
 
     return (
         <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '300px' }}>
-            <svg width="400" height="400" viewBox="-100 -100 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={styles.heartSvg} viewBox="-100 -100 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* Heart-Shaped Ripples */}
                 <motion.path d={heartPath} stroke="var(--accent-gold)" strokeWidth="1" variants={rippleVariants(0)} initial="initial" animate="animate" style={{ transformOrigin: "100px 80px" }} />
                 <motion.path d={heartPath} stroke="var(--accent-gold)" strokeWidth="1" variants={rippleVariants(1)} initial="initial" animate="animate" style={{ transformOrigin: "100px 80px" }} />
