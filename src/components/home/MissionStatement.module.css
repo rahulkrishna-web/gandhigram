@@ -1,0 +1,54 @@
+.section {
+    padding: 6rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    font-weight: 400;
+    /* Regular weight, letting highlights pop */
+    font-family: var(--font-serif);
+    /* Urbanist from globals */
+}
+
+/* Specific styling for the highlights to match reference */
+.highlight {
+    font-style: italic;
+    font-weight: 400;
+    color: #0070c9;
+    /* Apple/Gates blue-ish tone */
+    font-family: "Times New Roman", serif;
+    /* Or Playfair if we want to keep one retro element, but reference looks like a serif italic */
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text-primary);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: var(--text-primary);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+}

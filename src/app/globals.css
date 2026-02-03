@@ -34,7 +34,7 @@ html {
 body {
   color: var(--text-primary);
   background: var(--bg-primary);
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-sans);
   /* Fallback, set by next/font in layout */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -52,6 +52,7 @@ h6 {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5em;
+  letter-spacing: -1px;
 }
 
 a {

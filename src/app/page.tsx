@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero";
+import MissionStatement from "@/components/home/MissionStatement";
 import Intro from "@/components/home/Intro";
 import Programs from "@/components/home/Programs";
 import CaseStudies from "@/components/home/CaseStudies";
@@ -9,9 +10,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <DonorCarousel />
+      <MissionStatement />
       <Intro />
       <Programs />
+      <DonorCarousel />
       <CaseStudies />
       <Volunteer />
     </>
