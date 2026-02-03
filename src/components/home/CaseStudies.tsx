@@ -1,3 +1,5 @@
+'use client';
+import { useRef } from 'react';
 import Link from 'next/link';
 import styles from './CaseStudies.module.css';
 
@@ -29,6 +31,20 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (carouselRef.current) {
+            const { current } = carouselRef;
+            const scrollAmount = 300;
+            if (direction === 'left') {
+                current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    };
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
@@ -39,19 +55,19 @@ const CaseStudies = () => {
 
                 {/* Navigation Buttons (Visual only for now, can be hooked up) */}
                 <div className={styles.navContainer}>
-                    <button className={styles.navBtn} aria-label="Previous">
+                    <button className={styles.navBtn} aria-label="Previous" onClick={() => scroll('left')}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                         </svg>
                     </button>
-                    <button className={styles.navBtn} aria-label="Next">
+                    <button className={styles.navBtn} aria-label="Next" onClick={() => scroll('right')}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                     </button>
                 </div>
 
-                <div className={styles.carouselContainer}>
+                <div className={styles.carouselContainer} ref={carouselRef}>
                     <div className={styles.carouselTrack}>
                         {caseStudies.map((study) => (
                             <div key={study.id} className={styles.card}>

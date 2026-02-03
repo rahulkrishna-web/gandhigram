@@ -192,3 +192,29 @@
     width: 24px;
     height: 24px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        position: relative;
+    }
+
+    .navContainer {
+        position: absolute;
+        top: 55%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0 0.5rem;
+        justify-content: space-between;
+        pointer-events: none;
+        z-index: 20;
+        transform: translateY(-50%);
+    }
+
+    .navBtn {
+        pointer-events: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        background-color: var(--accent-gold);
+        opacity: 0.95;
+    }
+}
