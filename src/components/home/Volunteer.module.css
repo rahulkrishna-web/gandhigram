@@ -1,0 +1,107 @@
+.section {
+    padding: 6rem 0;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.content {
+    text-align: left;
+    /* padding-top removed as per request */
+}
+
+.animationWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    /* White title for better contrast */
+}
+
+.description {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.primaryBtn {
+    background-color: var(--accent-gold);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+}
+
+.secondaryBtn {
+    background-color: transparent;
+    color: var(--bg-primary);
+    border: 1px solid var(--bg-primary);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+        order: 1;
+        /* Content below animation on mobile */
+    }
+
+    .animationWrapper {
+        order: 0;
+    }
+
+    .actions {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

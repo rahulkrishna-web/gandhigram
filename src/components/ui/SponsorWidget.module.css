@@ -1,0 +1,60 @@
+.widget {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(75, 54, 33, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.pillContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.pill {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pill:hover {
+    background-color: rgba(75, 54, 33, 0.05);
+}
+
+.pill.active {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+.sponsorList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sponsorItem {
+    font-family: var(--font-sans);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-secondary);
+}
+
+.sponsorItem:last-child {
+    border-bottom: none;
+}

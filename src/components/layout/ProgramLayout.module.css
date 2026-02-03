@@ -1,0 +1,67 @@
+.wrapper {
+    background-color: var(--bg-primary);
+}
+
+.hero {
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.heroContent {
+    max-width: 800px;
+    padding: 0 1.5rem;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    /* Enforce white */
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    /* Stronger shadow */
+}
+
+.description {
+    font-family: var(--font-serif);
+    /* Changed to serif for elegance? Or keep sans. Plan said white text. Use sans for desc normally. */
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    /* Slightly larger */
+    line-height: 1.5;
+    color: #ffffff;
+    /* Enforce white */
+    opacity: 1;
+    /* Remove opacity to ensure brightness */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .hero {
+        min-height: 300px;
+        height: 50vh;
+    }
+}

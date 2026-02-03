@@ -1,0 +1,193 @@
+.container {
+    padding: 120px 2rem 60px;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.backLink {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.backLink:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.viewerContainer {
+    flex: 1;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 800px;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.pdfViewer {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.downloadBtn {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.downloadBtn:hover {
+    background: var(--primary-dark);
+}
+
+/* Report Content Styles */
+.contentContainer {
+    flex: 1;
+    margin-bottom: 3rem;
+}
+
+.reportContent {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.sectionHeader h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.sectionSubHeader {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.sectionText,
+.sectionList,
+.sectionTable {
+    margin-bottom: 2rem;
+}
+
+.sectionText h3,
+.sectionList h3,
+.sectionTable h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.sectionText p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.sectionList ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.sectionList li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.sectionTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.sectionTable th,
+.sectionTable td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.sectionTable th {
+    background-color: #f8f9fa;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.sectionTable tr:nth-child(even) {
+    background-color: #fbfbfb;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 100px;
+    }
+
+    .reportContent {
+        padding: 1.5rem;
+    }
+
+    .sectionHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    .sectionText h3,
+    .sectionList h3,
+    .sectionTable h3 {
+        font-size: 1.2rem;
+    }
+}
