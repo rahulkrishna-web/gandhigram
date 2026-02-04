@@ -135,10 +135,28 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
     .header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .carouselContainer {
+        padding: 0 0 2rem 0;
+        scroll-padding-left: 2rem;
+    }
+
+    .card:first-child {
+        margin-left: 2rem;
+    }
+
+    .card:last-child {
+        margin-right: 2rem;
     }
 
     .navContainer {

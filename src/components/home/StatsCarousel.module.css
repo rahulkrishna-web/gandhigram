@@ -57,3 +57,10 @@
         /* Let swipe go edge to edge on mobile */
     }
 }
+
+@media (max-width: 768px) {
+    .cardWrapper {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
