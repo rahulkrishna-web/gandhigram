@@ -18,7 +18,7 @@ const CountUpNumber = ({ value, suffix = '', duration = 1.5, repeat = false }: C
         duration: duration * 1000
     });
 
-    const isInView = useInView(ref, { once: !repeat, margin: "-50px" });
+    const isInView = useInView(ref, { once: !repeat, margin: "-50px 0px" });
 
     useEffect(() => {
         if (isInView) {

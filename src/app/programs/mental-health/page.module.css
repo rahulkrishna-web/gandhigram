@@ -184,7 +184,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 0.5rem;
     }
 
     .leadDisplay {
@@ -221,5 +221,17 @@
         scroll-snap-align: start;
         height: auto;
         /* Allow auto height */
+    }
+
+    .cardGrid {
+        scroll-padding-left: 2rem;
+    }
+
+    .interventionCard:first-child {
+        margin-left: 2rem;
+    }
+
+    .interventionCard:last-child {
+        margin-right: 2rem;
     }
 }

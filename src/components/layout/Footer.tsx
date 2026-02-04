@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
 
                     <div className={styles.linksColumn}>
-                        <h4 className={styles.columnTitle}>Company</h4>
+                        <h4 className={styles.columnTitle}>Organization</h4>
                         <ul className={styles.linkList}>
                             <li><Link href="/about">About Us</Link></li>
                             <li><Link href="/contact">Contact</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
                         <h4 className={styles.columnTitle}>Legal</h4>
                         <ul className={styles.linkList}>
                             <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                            <li><Link href="/terms">Terms of Service</Link></li>
+                            <li><Link href="/terms-of-service">Terms of Service</Link></li>
                         </ul>
                     </div>
                 </div>

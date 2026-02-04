@@ -92,8 +92,15 @@ const SponsorWidget = () => {
                 </div>
 
                 {/* Mobile Ticker */}
-                <div className={styles.mobileTicker}>
-                    {[...currentSponsors, ...currentSponsors].map((sponsor, index) => (
+                <div
+                    className={styles.mobileTicker}
+                    style={{
+                        animation: currentSponsors.length > 1 ? undefined : 'none',
+                        justifyContent: currentSponsors.length > 1 ? 'flex-start' : 'center',
+                        width: currentSponsors.length > 1 ? 'max-content' : '100%',
+                    }}
+                >
+                    {(currentSponsors.length > 1 ? [...currentSponsors, ...currentSponsors] : currentSponsors).map((sponsor, index) => (
                         <div key={`mobile-${index}`} className={styles.tickerItem}>
                             {sponsor.logo ? (
                                 <div style={{ position: 'relative', width: '100%', height: '160px' }}>
