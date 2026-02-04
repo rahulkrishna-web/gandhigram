@@ -15,14 +15,20 @@ interface Album {
 
 interface GalleryGridProps {
     albums: Album[];
+    mobileCardWidth?: string;
 }
 
-const GalleryGrid = ({ albums }: GalleryGridProps) => {
+const GalleryGrid = ({ albums, mobileCardWidth = '85vw' }: GalleryGridProps) => {
     const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
 
     return (
         <>
-            <div className={styles.grid}>
+            <div
+                className={styles.grid}
+                style={{
+                    '--mobile-card-width': mobileCardWidth
+                } as React.CSSProperties}
+            >
                 {albums.map((album) => (
                     <motion.div
                         key={album.id}

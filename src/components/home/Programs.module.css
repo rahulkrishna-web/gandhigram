@@ -1,178 +1,140 @@
 .programs {
     padding: 6rem 0;
-    background-color: var(--bg-secondary);
+    background-color: #ffffff;
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 4rem;
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
 }
 
 .sectionTitle {
     font-family: var(--font-serif);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
     color: var(--text-primary);
 }
 
-.sectionSubtitle {
-    font-family: var(--font-sans);
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    /* Increased min-width for wider cards */
-    gap: 3rem;
-    justify-content: center;
-}
-
-.programCard {
-    background: var(--bg-primary);
-    border-radius: 12px;
-    overflow: hidden;
-    /* Important for containing the carousel */
-    border: 1px solid rgba(75, 54, 33, 0.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.programRow {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
 }
 
-.programCard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(75, 54, 33, 0.1);
+.programRow.reverse {
+    flex-direction: row-reverse;
 }
 
-.cardContent {
-    padding: 2.5rem;
+.textContent {
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .programTitle {
     font-family: var(--font-serif);
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     color: var(--text-primary);
-    margin-bottom: 1rem;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-.programTitle::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background-color: var(--accent-gold);
+    line-height: 1.2;
+    margin: 0;
 }
 
 .programDesc {
     font-family: var(--font-sans);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-    opacity: 0.8;
-}
-
-.statsContainer {
-    background: #fdfbf7;
-    border-radius: 12px;
-    padding: 2rem 1.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(218, 165, 32, 0.2);
-    /* faint gold border */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.statsTitle {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 1.125rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid rgba(75, 54, 33, 0.1);
-    padding-bottom: 0.75rem;
-    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.metrics {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-}
-
-.metricItem {
-    text-align: center;
+.imageWrapper {
     flex: 1;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.programImage {
+    object-fit: cover;
+}
+
+/* Stats */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.statItem {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 0.5rem;
 }
 
-.metricValue {
-    display: block;
+.statValue {
     font-family: var(--font-serif);
-    font-size: 3rem;
-    /* Much larger */
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--accent-green);
-    margin-bottom: 0.5rem;
+    /* Using green for stats */
     line-height: 1;
 }
 
-.metricLabel {
+.statLabel {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
-    color: var(--text-primary);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
     line-height: 1.4;
-    display: block;
-    opacity: 0.8;
+    font-weight: 500;
 }
 
 .link {
-    margin-top: auto;
-    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-sans);
     font-weight: 600;
     color: var(--text-primary);
-    border-bottom: 2px solid var(--accent-gold);
-    padding-bottom: 2px;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: color 0.2s;
+    font-size: 1rem;
 }
 
 .link:hover {
     color: var(--accent-gold);
-    border-color: transparent;
 }
 
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 900px) {
 
-    .metrics {
+    .programRow,
+    .programRow.reverse {
         flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
+        gap: 3rem;
     }
 
-    .metricLabel {
-        font-size: 0.85rem;
+    .imageWrapper {
+        width: 100%;
+        aspect-ratio: 16/9;
+        /* Wider on mobile */
+    }
+
+    .statsGrid {
+        gap: 1.5rem;
+    }
+
+    .statValue {
+        font-size: 2rem;
     }
 }

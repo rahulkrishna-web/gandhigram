@@ -6,26 +6,27 @@ interface CountUpNumberProps {
     value: number;
     suffix?: string;
     duration?: number;
+    repeat?: boolean;
 }
 
-const CountUpNumber = ({ value, suffix = '', duration = 1.5 }: CountUpNumberProps) => {
+const CountUpNumber = ({ value, suffix = '', duration = 1.5, repeat = false }: CountUpNumberProps) => {
     const ref = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, {
         damping: 30,
         stiffness: 50,
-        duration: duration * 1000 // duration isn't directly used by spring, but stiffness/damping control speed. 
-        // Actually, for a simple count up, animate() might be easier, but spring feels nicer. 
-        // Let's just use spring parameters that feel good.
+        duration: duration * 1000
     });
 
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const isInView = useInView(ref, { once: !repeat, margin: "-50px" });
 
     useEffect(() => {
         if (isInView) {
             motionValue.set(value);
+        } else if (repeat) {
+            motionValue.set(0);
         }
-    }, [isInView, value, motionValue]);
+    }, [isInView, value, motionValue, repeat]);
 
     const [displayValue, setDisplayValue] = useState(0);
 

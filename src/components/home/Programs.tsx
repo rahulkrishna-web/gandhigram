@@ -1,103 +1,91 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CountUpNumber from '../ui/CountUpNumber';
-import ImageCarousel from '../ui/ImageCarousel';
 import styles from './Programs.module.css';
 
 const Programs = () => {
-    // Shared images for now - can be customized per program if more assets available
-    const mhImages = [
-        "/images/slideshow/slide2.jpg",
-        "/images/slideshow/slide1.jpg",
-        "/images/slideshow/slide3.jpg",
-    ];
-
-    const eiImages = [
-        "/images/slideshow/slide3.jpg",
-        "/images/slideshow/slide1.jpg",
-        "/images/slideshow/slide2.jpg",
-    ];
-
     return (
         <section className={styles.programs}>
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <h2 className={styles.sectionTitle}>Our Core Programs</h2>
-                    <p className={styles.sectionSubtitle}>Empowering communities through dedicated intervention.</p>
+                {/* Mental Health */}
+                <div className={styles.programRow}>
+                    <div className={styles.textContent}>
+                        <h2 className={styles.programTitle}>Mental Health</h2>
+                        <p className={styles.programDesc}>
+                            Restoring dignity and hope through community-based rehabilitation and clinical care. We address the critical gap in mental healthcare with a holistic approach.
+                        </p>
+
+                        <div className={styles.statsGrid}>
+                            <div className={styles.statItem}>
+                                <span className={styles.statValue}>
+                                    <CountUpNumber value={663} />
+                                </span>
+                                <span className={styles.statLabel}>Individuals Enrolled</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statValue}>
+                                    <CountUpNumber value={400} suffix="+" />
+                                </span>
+                                <span className={styles.statLabel}>Psychiatric Treatment</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statValue}>
+                                    <CountUpNumber value={200} suffix="+" />
+                                </span>
+                                <span className={styles.statLabel}>Received Counselling</span>
+                            </div>
+                        </div>
+
+                        <Link href="/programs/mental-health" className={styles.link}>Learn More &rarr;</Link>
+                    </div>
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src="/images/slideshow/slide2.jpg"
+                            alt="Mental Health Program"
+                            fill
+                            className={styles.programImage}
+                        />
+                    </div>
                 </div>
 
-                <div className={styles.grid}>
-                    {/* Mental Health Program */}
-                    <div className={styles.programCard}>
-                        <ImageCarousel images={mhImages} />
-                        <div className={styles.cardContent}>
-                            <h3 className={styles.programTitle}>Mental Health</h3>
-                            <p className={styles.programDesc}>
-                                Promoting mental well-being through counseling, rehabilitation, and community awareness.
-                            </p>
+                {/* Early Intervention */}
+                <div className={`${styles.programRow} ${styles.reverse}`}>
+                    <div className={styles.textContent}>
+                        <h2 className={styles.programTitle}>Early Intervention</h2>
+                        <p className={styles.programDesc}>
+                            Ensuring optimal development for children with special needs. By providing specialized care early, we maximize every child's potential.
+                        </p>
 
-                            <div className={styles.statsContainer}>
-                                <h4 className={styles.statsTitle}>Programme Reach</h4>
-                                <div className={styles.metrics}>
-                                    <div className={styles.metricItem}>
-                                        <div className={styles.metricValue}>
-                                            <CountUpNumber value={663} />
-                                        </div>
-                                        <span className={styles.metricLabel}>Individuals Enrolled</span>
-                                    </div>
-                                    <div className={styles.metricItem}>
-                                        <div className={styles.metricValue}>
-                                            <CountUpNumber value={400} suffix="+" />
-                                        </div>
-                                        <span className={styles.metricLabel}>Psychiatric Treatment</span>
-                                    </div>
-                                    <div className={styles.metricItem}>
-                                        <div className={styles.metricValue}>
-                                            <CountUpNumber value={200} suffix="+" />
-                                        </div>
-                                        <span className={styles.metricLabel}>Received Counselling</span>
-                                    </div>
-                                </div>
+                        <div className={styles.statsGrid}>
+                            <div className={styles.statItem}>
+                                <span className={styles.statValue}>
+                                    <CountUpNumber value={2211} />
+                                </span>
+                                <span className={styles.statLabel}>Children Screened</span>
                             </div>
-
-                            <Link href="/programs/mental-health" className={styles.link}>Learn More &rarr;</Link>
+                            <div className={styles.statItem}>
+                                <span className={styles.statValue}>
+                                    <CountUpNumber value={183} />
+                                </span>
+                                <span className={styles.statLabel}>Enrolled & Receiving Rehab</span>
+                            </div>
+                            <div className={styles.statItem}>
+                                <span className={styles.statValue}>
+                                    <CountUpNumber value={45} suffix="+" />
+                                </span>
+                                <span className={styles.statLabel}>Families Supported</span>
+                            </div>
                         </div>
+
+                        <Link href="/programs/early-intervention" className={styles.link}>Learn More &rarr;</Link>
                     </div>
-
-                    {/* Early Intervention Program */}
-                    <div className={styles.programCard}>
-                        <ImageCarousel images={eiImages} />
-                        <div className={styles.cardContent}>
-                            <h3 className={styles.programTitle}>Early Intervention</h3>
-                            <p className={styles.programDesc}>
-                                Supporting children with developmental delays through timely assessment and therapy.
-                            </p>
-
-                            <div className={styles.statsContainer}>
-                                <h4 className={styles.statsTitle}>Impact at a Glance</h4>
-                                <div className={styles.metrics}>
-                                    <div className={styles.metricItem}>
-                                        <div className={styles.metricValue}>
-                                            <CountUpNumber value={2211} />
-                                        </div>
-                                        <span className={styles.metricLabel}>Children Screened</span>
-                                    </div>
-                                    <div className={styles.metricItem}>
-                                        <div className={styles.metricValue}>
-                                            <CountUpNumber value={183} />
-                                        </div>
-                                        <span className={styles.metricLabel}>Enrolled & Receiving Rehab</span>
-                                    </div>
-                                    <div className={styles.metricItem}>
-                                        <div className={styles.metricValue}>
-                                            <CountUpNumber value={45} suffix="+" />
-                                        </div>
-                                        <span className={styles.metricLabel}>Families Supported</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <Link href="/programs/early-intervention" className={styles.link}>Learn More &rarr;</Link>
-                        </div>
+                    <div className={styles.imageWrapper}>
+                        <Image
+                            src="/images/slideshow/slide3.jpg"
+                            alt="Early Intervention Program"
+                            fill
+                            className={styles.programImage}
+                        />
                     </div>
                 </div>
             </div>

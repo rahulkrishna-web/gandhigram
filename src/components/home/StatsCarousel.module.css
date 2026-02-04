@@ -1,0 +1,59 @@
+.section {
+    padding: 4rem 0;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.cardWrapper {
+    width: 100%;
+    display: flex;
+    /* Ensure height stretch */
+}
+
+/* Mobile / Tablet Styles */
+@media (max-width: 1200px) {
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 2rem;
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE/Edge */
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cardWrapper {
+        flex: 0 0 300px;
+        /* Fixed width for swipe items */
+        scroll-snap-align: center;
+        width: 300px;
+    }
+
+    .container {
+        padding: 0;
+        /* Let swipe go edge to edge on mobile */
+    }
+}

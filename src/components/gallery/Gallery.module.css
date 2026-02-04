@@ -175,3 +175,31 @@
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
 }
+
+@media (max-width: 768px) {
+    .grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 2rem;
+
+        /* Full Bleed Logic */
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 var(--mobile-card-width, 85vw);
+        scroll-snap-align: start;
+        width: auto;
+    }
+}
