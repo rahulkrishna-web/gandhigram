@@ -12,17 +12,23 @@ const slides = [
 
 
 const Hero = () => {
+    const [sliderReady, setSliderReady] = useState(false);
     const [[currentSlide, direction], setCurrentSlide] = useState([0, 0]);
+
+    useEffect(() => {
+        setSliderReady(true);
+    }, []);
 
     // We only want to run the effect when we are not interacting? 
     // Or just let it run. Usually standard is to pause on hover, but user didn't ask.
     // I'll keep it simple: auto-play continues.
     useEffect(() => {
+        if (!sliderReady) return;
         const timer = setInterval(() => {
             paginate(1);
         }, 5000); // Change slide every 5 seconds
         return () => clearInterval(timer);
-    }, [currentSlide]); // Reset timer on slide change
+    }, [currentSlide, sliderReady]); // Reset timer on slide change
 
     const paginate = (newDirection: number) => {
         let newIndex = currentSlide + newDirection;
@@ -85,56 +91,69 @@ const Hero = () => {
     return (
         <section className={styles.hero}>
             {/* Background Slideshow */}
-            <AnimatePresence initial={false} custom={direction}>
-                <motion.div
-                    key={currentSlide}
-                    className={styles.bgImage}
-                    custom={direction}
-                    variants={slideVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                        x: { type: "tween", ease: "easeInOut", duration: 0.8 },
-                        opacity: { duration: 0.2 }
-                    }}
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={1}
-                    onDragEnd={(e, { offset, velocity }) => {
-                        const swipe = Math.abs(offset.x) * velocity.x;
-                        if (swipe < -10000) {
-                            paginate(1);
-                        } else if (swipe > 10000) {
-                            paginate(-1);
-                        }
-                    }}
-                >
+            {sliderReady ? (
+                <AnimatePresence initial={false} custom={direction}>
+                    <motion.div
+                        key={currentSlide}
+                        className={styles.bgImage}
+                        custom={direction}
+                        variants={slideVariants}
+                        initial="enter"
+                        animate="center"
+                        exit="exit"
+                        transition={{
+                            x: { type: "tween", ease: "easeInOut", duration: 0.8 },
+                            opacity: { duration: 0.2 }
+                        }}
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        dragElastic={1}
+                        onDragEnd={(e, { offset, velocity }) => {
+                            const swipe = Math.abs(offset.x) * velocity.x;
+                            if (swipe < -10000) {
+                                paginate(1);
+                            } else if (swipe > 10000) {
+                                paginate(-1);
+                            }
+                        }}
+                    >
+                        <Image
+                            src={slides[currentSlide].image}
+                            alt={slides[currentSlide].alt}
+                            fill
+                            priority={currentSlide === 0}
+                            sizes="100vw"
+                            style={{ objectFit: 'cover' }}
+                        />
+                        <div className={styles.overlay} />
+                    </motion.div>
+                </AnimatePresence>
+            ) : (
+                <div className={styles.bgImage}>
                     <Image
-                        src={slides[currentSlide].image}
-                        alt={slides[currentSlide].alt}
+                        src={slides[0].image}
+                        alt={slides[0].alt}
                         fill
                         priority
                         sizes="100vw"
                         style={{ objectFit: 'cover' }}
                     />
                     <div className={styles.overlay} />
-                </motion.div>
-            </AnimatePresence>
+                </div>
+            )}
 
             {/* Preload hidden images to prevent slide transition delay */}
-            <div style={{ display: 'none' }}>
-                {slides.map((slide) => (
-                    <Image
-                        key={slide.id}
-                        src={slide.image}
-                        alt="Preload"
-                        width={100}
-                        height={100}
-                        priority
-                    />
-                ))}
-            </div>
+            {sliderReady && (
+                <div style={{ display: 'none' }}>
+                    {slides.slice(1).map((slide) => (
+                        <img
+                            key={slide.id}
+                            src={slide.image}
+                            alt="Preload"
+                        />
+                    ))}
+                </div>
+            )}
 
 
 
