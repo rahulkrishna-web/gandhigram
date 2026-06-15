@@ -28,7 +28,7 @@ body {
 }
 
 html {
-  font-size: clamp(16px, 0.5vw + 14px, 20px);
+  font-size: 14px;
 }
 
 body {
