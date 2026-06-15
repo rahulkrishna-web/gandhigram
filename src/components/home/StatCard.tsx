@@ -24,14 +24,14 @@ const StatCard = ({ stat, index }: StatCardProps) => {
             onViewportEnter={() => setKey(prev => prev + 1)}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             style={{
-                background: '#fff',
+                background: 'var(--bg-card)',
                 borderRadius: '16px',
                 padding: '1.5rem',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
                 display: 'flex',
                 flexDirection: 'column',
                 height: '360px',
-                border: '1px solid rgba(0,0,0,0.05)',
+                border: '1px solid var(--border-color)',
                 width: '100%',
             }}
         >
@@ -39,12 +39,12 @@ const StatCard = ({ stat, index }: StatCardProps) => {
                 <h3 style={{
                     fontSize: '1.1rem',
                     fontWeight: 600,
-                    color: '#1a202c',
+                    color: 'var(--text-primary)',
                     marginBottom: '0.25rem'
                 }}>
                     {stat.title}
                 </h3>
-                <p style={{ fontSize: '0.875rem', color: '#718096' }}>{stat.subtitle}</p>
+                <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>{stat.subtitle}</p>
             </div>
 
             <div style={{ flex: 1, minHeight: 0 }}>
@@ -53,13 +53,19 @@ const StatCard = ({ stat, index }: StatCardProps) => {
                         <BarChart data={stat.data}>
                             <XAxis
                                 dataKey="name"
-                                tick={{ fontSize: 10 }}
+                                tick={{ fontSize: 10, fill: 'var(--text-secondary)' }}
                                 interval={0}
                                 tickLine={false}
                                 axisLine={false}
                             />
                             <Tooltip
-                                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+                                contentStyle={{ 
+                                    borderRadius: '8px', 
+                                    border: '1px solid var(--border-color)', 
+                                    background: 'var(--bg-card)',
+                                    color: 'var(--text-primary)',
+                                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)' 
+                                }}
                                 cursor={{ fill: 'transparent' }}
                             />
                             <Bar
@@ -88,7 +94,13 @@ const StatCard = ({ stat, index }: StatCardProps) => {
                                 ))}
                             </Pie>
                             <Tooltip
-                                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
+                                contentStyle={{ 
+                                    borderRadius: '8px', 
+                                    border: '1px solid var(--border-color)', 
+                                    background: 'var(--bg-card)',
+                                    color: 'var(--text-primary)',
+                                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)' 
+                                }}
                             />
                         </PieChart>
                     )}
@@ -98,7 +110,7 @@ const StatCard = ({ stat, index }: StatCardProps) => {
             <div style={{
                 marginTop: '1rem',
                 textAlign: 'right',
-                borderTop: '1px solid #f0f0f0',
+                borderTop: '1px solid var(--border-color)',
                 paddingTop: '0.75rem'
             }}>
                 <span style={{

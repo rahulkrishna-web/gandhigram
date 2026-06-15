@@ -9,10 +9,10 @@ const Intro = () => {
                 <div className={styles.card}>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/images/case-studies/story-1.jpg"
+                            src="/images/case-studies/our-work.webp"
                             alt="Our Work"
                             width={400}
-                            height={250}
+                            height={300}
                             className={styles.image}
                         />
                     </div>
@@ -28,7 +28,7 @@ const Intro = () => {
                 <div className={styles.card}>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/images/case-studies/story-2.jpg"
+                            src="/images/case-studies/story-2.webp"
                             alt="Our Story"
                             width={400}
                             height={250}

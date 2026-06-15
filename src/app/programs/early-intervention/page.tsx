@@ -2,6 +2,8 @@
 
 import ProgramLayout from '@/components/layout/ProgramLayout';
 import SponsorWidget from '@/components/ui/SponsorWidget';
+import GalleryGrid from '@/components/gallery/GalleryGrid';
+import galleryManifest from '@/data/early-intervention-gallery-manifest.json';
 import styles from './page.module.css';
 import { Activity, Puzzle, Mic, BookOpen, Smile, Gamepad2, Blocks, ClipboardCheck, Trees, IdCard, Gift, Stethoscope } from 'lucide-react';
 import CountUpNumber from '@/components/ui/CountUpNumber';
@@ -11,7 +13,7 @@ export default function EarlyInterventionPage() {
         <ProgramLayout
             title="Early Intervention"
             description="Timely support and therapy for children with special needs to ensure their optimal development."
-            heroImage="/images/slideshow/slide3.jpg"
+            heroImage="/images/banners/early-intervention-banner.webp"
         >
             <div className={styles.container}>
                 {/* Lead Section */}
@@ -113,7 +115,7 @@ export default function EarlyInterventionPage() {
                 {/* Facilities Section */}
                 <section className={styles.section}>
                     <h2 className={styles.heading}>Facilities & Resources</h2>
-                    <p className={styles.leadText} style={{ textAlign: 'center' }}>
+                    <p className={styles.leadText} style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
                         Our centre is designed to be a stimulating environment for children, equipped with:
                     </p>
                     <div className={styles.cardGrid}>
@@ -159,8 +161,8 @@ export default function EarlyInterventionPage() {
                 {/* Parental Support Section */}
                 <section className={styles.section}>
                     <h2 className={styles.heading}>Parental Support</h2>
-                    <p className={styles.leadText} style={{ textAlign: 'center' }}>
-                        We empower families as partners in the rehabilitation process, assisting with:
+                    <p className={styles.leadText} style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+                        Helping them access government schemes, benefits and obtain government issue identity cards (UDID) for their children. They are educated on the child's condition, referred appropriately for specialist's consultation and motivated to access rehabilitation for their children.
                     </p>
                     <div className={styles.cardGrid}>
                         <div className={styles.interventionCard}>
@@ -191,6 +193,14 @@ export default function EarlyInterventionPage() {
                             </p>
                         </div>
                     </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 className={styles.heading} style={{ marginBottom: '1rem' }}>Program Activities Gallery</h2>
+                    <p className={styles.leadText} style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+                        Snapshots from our early intervention programs, clinical assessments, awareness camps, and community stakeholders engagement.
+                    </p>
+                    <GalleryGrid albums={galleryManifest} />
                 </section>
 
                 <section className={styles.section}>

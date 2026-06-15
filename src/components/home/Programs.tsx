@@ -40,7 +40,7 @@ const Programs = () => {
                     </div>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/images/slideshow/slide2.jpg"
+                            src="/images/programs/mental-health-awareness.webp"
                             alt="Mental Health Program"
                             fill
                             className={styles.programImage}
@@ -81,7 +81,7 @@ const Programs = () => {
                     </div>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/images/slideshow/slide3.jpg"
+                            src="/images/programs/early-intervention.webp"
                             alt="Early Intervention Program"
                             fill
                             className={styles.programImage}

@@ -21,7 +21,7 @@ export const impactStats: ImpactStat[] = [
         value: '663',
         subtitle: 'New Individuals Enrolled',
         type: 'bar',
-        color: '#8884d8',
+        color: '#556B2F', // Dark Olive Green
         data: [
             { name: 'Jan', value: 45 },
             { name: 'Feb', value: 52 },
@@ -40,10 +40,10 @@ export const impactStats: ImpactStat[] = [
         value: '100%',
         subtitle: 'Gender Distribution',
         type: 'pie',
-        color: '#82ca9d',
+        color: '#8B4513', // Saddle Brown for value
         data: [
-            { name: 'Female', value: 58, fill: '#FF8042' },
-            { name: 'Male', value: 42, fill: '#0088FE' },
+            { name: 'Female', value: 58, fill: '#556B2F' }, // Dark Olive Green
+            { name: 'Male', value: 42, fill: '#DAA520' }, // Muted Gold
         ]
     },
     {
@@ -52,7 +52,7 @@ export const impactStats: ImpactStat[] = [
         value: '2,211',
         subtitle: 'Children Screened for Delays',
         type: 'bar',
-        color: '#FFBB28',
+        color: '#DAA520', // Muted Gold
         data: [
             { name: 'Q1', value: 540 },
             { name: 'Q2', value: 620 },
@@ -65,12 +65,12 @@ export const impactStats: ImpactStat[] = [
         value: '400+',
         subtitle: 'Psychiatric Cases Managed',
         type: 'pie',
-        color: '#ffc658',
+        color: '#8B4513', // Saddle Brown for value
         data: [
-            { name: 'Schizo', value: 35, fill: '#00C49F' },
-            { name: 'Mood', value: 25, fill: '#FFBB28' },
-            { name: 'Anxiety', value: 20, fill: '#FF8042' },
-            { name: 'Other', value: 20, fill: '#0088FE' },
+            { name: 'Schizo', value: 35, fill: '#556B2F' }, // Dark Olive Green
+            { name: 'Mood', value: 25, fill: '#DAA520' }, // Muted Gold
+            { name: 'Anxiety', value: 20, fill: '#8B4513' }, // Saddle Brown
+            { name: 'Other', value: 20, fill: '#D2B48C' }, // Tan
         ]
     },
     {
@@ -79,7 +79,7 @@ export const impactStats: ImpactStat[] = [
         value: '45+',
         subtitle: 'Awareness Camps Conducted',
         type: 'bar',
-        color: '#ff7300',
+        color: '#8B4513', // Saddle Brown
         data: [
             { name: 'Schools', value: 15 },
             { name: 'Villages', value: 20 },

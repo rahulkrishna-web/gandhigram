@@ -1,13 +1,15 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 const slides = [
-    { id: 1, image: '/images/slideshow/slide1.jpg', alt: 'Gandhigram Community Service' },
-    { id: 2, image: '/images/slideshow/slide2.jpg', alt: 'Rural Development' },
-    { id: 3, image: '/images/slideshow/slide3.jpg', alt: 'Empowering Women' },
+    { id: 1, image: '/images/slideshow/slide1.webp', alt: 'Gandhigram Community Service' },
+    { id: 2, image: '/images/slideshow/slide2.webp', alt: 'Rural Development' },
+    { id: 3, image: '/images/slideshow/slide3.webp', alt: 'Empowering Women' },
 ];
+
 
 const Hero = () => {
     const [[currentSlide, direction], setCurrentSlide] = useState([0, 0]);
@@ -107,11 +109,32 @@ const Hero = () => {
                             paginate(-1);
                         }
                     }}
-                    style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
                 >
+                    <Image
+                        src={slides[currentSlide].image}
+                        alt={slides[currentSlide].alt}
+                        fill
+                        priority
+                        sizes="100vw"
+                        style={{ objectFit: 'cover' }}
+                    />
                     <div className={styles.overlay} />
                 </motion.div>
             </AnimatePresence>
+
+            {/* Preload hidden images to prevent slide transition delay */}
+            <div style={{ display: 'none' }}>
+                {slides.map((slide) => (
+                    <Image
+                        key={slide.id}
+                        src={slide.image}
+                        alt="Preload"
+                        width={100}
+                        height={100}
+                        priority
+                    />
+                ))}
+            </div>
 
 
 

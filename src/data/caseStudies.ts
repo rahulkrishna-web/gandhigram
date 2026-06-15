@@ -17,7 +17,7 @@ export const caseStudies = [
             <h3>Conclusion</h3>
             <p>This case highlights the transformative power of timely professional counselling in resolving deep-seated family conflicts and restoring peace to the household.</p>
         `,
-        image: "/images/case-studies/story-1.jpg",
+        image: "/images/case-studies/story-1.webp",
         date: "September 2025"
     },
     {
@@ -38,7 +38,7 @@ export const caseStudies = [
             <h3>Conclusion</h3>
             <p>Her journey demonstrates that with the right clinical intervention, even severe anxiety can be managed, allowing individuals to reclaim control over their lives.</p>
         `,
-        image: "/images/case-studies/story-2.jpg",
+        image: "/images/case-studies/story-2.webp",
         date: "September 2025"
     },
     {
@@ -59,7 +59,7 @@ export const caseStudies = [
             <h3>Conclusion</h3>
             <p>This success story underscores the importance of early identification and community-based rehabilitation in empowering individuals with mental health challenges.</p>
         `,
-        image: "/images/case-studies/story-3.jpg",
+        image: "/images/case-studies/story-3.webp",
         date: "September 2025"
     },
     {
@@ -80,7 +80,7 @@ export const caseStudies = [
             <h3>Conclusion</h3>
             <p>His recovery illustrates that with proper diagnosis and care, individuals can overcome severe mental health hurdles and rebuild a peaceful, productive family life.</p>
         `,
-        image: "/images/case-studies/story-4.jpg",
+        image: "/images/case-studies/story-4.webp",
         date: "September 2025"
     },
     {
@@ -101,7 +101,7 @@ export const caseStudies = [
             <h3>Conclusion</h3>
             <p>Her story is a testament to the fact that with consistent care, individuals with chronic conditions like Schizophrenia can lead fulfilling, independent lives.</p>
         `,
-        image: "/images/case-studies/story-5.jpg",
+        image: "/images/case-studies/story-5.webp",
         date: "September 2025"
     },
     {
@@ -122,7 +122,7 @@ export const caseStudies = [
             <h3>Conclusion</h3>
             <p>This case highlights how mental health support can ripple outwards, restoring not just personal well-being but also economic livelihood and family harmony.</p>
         `,
-        image: "/images/case-studies/story-6.jpg",
+        image: "/images/case-studies/story-6.webp",
         date: "September 2025"
     }
 ];

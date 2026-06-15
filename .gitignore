@@ -39,3 +39,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local memory
+memory.md
+
+# large media files
+/public/vid/GI_Care Matters_Short.mp4
+
+# raw source directories
+/public/mental_health_gallery/
+/public/early_intervention_gallery/
+/public/newspaper/
+/public/raw/
+
+# image backups
+**/original_backup/
+*_original_backup.*
+

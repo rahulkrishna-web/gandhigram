@@ -13,7 +13,12 @@ export default function MentalHealthPage() {
         <ProgramLayout
             title="Mental Health Project"
             description=""
-            heroImage="/images/slideshow/slide2.jpg"
+            heroImage="/images/banners/mental-health-banner-2.webp"
+            heroImages={[
+                '/images/banners/mental-health-banner-1.webp',
+                '/images/banners/mental-health-banner-2.webp',
+                '/images/banners/mental-health-banner-3.webp'
+            ]}
         >
             <div className={styles.container}>
                 <section className={styles.leadSection}>
@@ -98,7 +103,7 @@ export default function MentalHealthPage() {
 
             <div className={styles.container}>
                 <section className={styles.section}>
-                    <h2 className={styles.heading}>Program Activities Gallery</h2>
+                    <h2 className={styles.heading} style={{ marginBottom: '1rem' }}>Program Activities Gallery</h2>
                     <p className={styles.leadText} style={{ textAlign: 'center', marginBottom: '2rem' }}>
                         Snapshots from our field work, awareness camps, and community engagement sessions.
                     </p>
