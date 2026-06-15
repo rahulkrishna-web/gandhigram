@@ -13,8 +13,8 @@ const Volunteer = () => {
                     <div className={styles.content}>
                         <h2 className={styles.title}>Join Our Mission</h2>
                         <p className={styles.description}>
-                            Be the change you wish to see. Your time and skills can transform lives in rural India.
-                            Whether you are a medical professional, educator, or simply willing to help, we have a place for you.
+                            Be the change you wish to see. Join us to support mental wellbeing, empower special children, and transform lives in rural India.
+                            Whether you are a medical professional, educator, or simply willing to make a difference, we have a welcoming place for you.
                         </p>
                         <div className={styles.actions}>
                             <Link href="/volunteer" className={styles.primaryBtn}>
