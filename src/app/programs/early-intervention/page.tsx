@@ -1,7 +1,7 @@
 'use client';
 
 import ProgramLayout from '@/components/layout/ProgramLayout';
-import SponsorWidget from '@/components/ui/SponsorWidget';
+import DonorCarousel from '@/components/home/DonorCarousel';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import galleryManifest from '@/data/early-intervention-gallery-manifest.json';
 import styles from './page.module.css';
@@ -204,7 +204,7 @@ export default function EarlyInterventionPage() {
                 </section>
 
                 <section className={styles.section}>
-                    <SponsorWidget />
+                    <DonorCarousel />
                 </section>
             </div>
         </ProgramLayout>
