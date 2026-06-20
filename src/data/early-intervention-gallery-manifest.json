@@ -389,5 +389,28 @@
       "/images/early-intervention-gallery/speech-assessment-photo/audio-meter-product-and-verification/demo-session-3.webp",
       "/images/early-intervention-gallery/speech-assessment-photo/audio-meter-product-and-verification/demo-session-4.webp"
     ]
+  },
+  {
+    "id": "clinical-psychology-assessment",
+    "title": "Clinical Psychology Assessment",
+    "thumbnail": "/images/early-intervention-gallery/clinical-psychology-assessment/clinical-psy-19-6-1.webp",
+    "images": [
+      "/images/early-intervention-gallery/clinical-psychology-assessment/clinical-psy-19-6-1.webp",
+      "/images/early-intervention-gallery/clinical-psychology-assessment/clinical-psy-19-6-2.webp",
+      "/images/early-intervention-gallery/clinical-psychology-assessment/clinical-psychologist-assesment-on-29-and-30-th-may-2.webp",
+      "/images/early-intervention-gallery/clinical-psychology-assessment/clinical-psychology-assessment-1.webp"
+    ]
+  },
+  {
+    "id": "speech-and-audiology-services",
+    "title": "Speech & Audiology Services",
+    "thumbnail": "/images/early-intervention-gallery/speech-and-audiology-services/23-5-2026-assessment-7.webp",
+    "images": [
+      "/images/early-intervention-gallery/speech-and-audiology-services/23-5-2026-assessment-7.webp",
+      "/images/early-intervention-gallery/speech-and-audiology-services/speech-and-audio-assessment-17-4-2.webp",
+      "/images/early-intervention-gallery/speech-and-audiology-services/speech-and-audio-assessment-17-4-3.webp",
+      "/images/early-intervention-gallery/speech-and-audiology-services/speech-assessment-18-4-1.webp",
+      "/images/early-intervention-gallery/speech-and-audiology-services/speech.webp"
+    ]
   }
 ]

@@ -5,7 +5,7 @@ import DonorCarousel from '@/components/home/DonorCarousel';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import galleryManifest from '@/data/gallery-manifest.json';
 import styles from './page.module.css';
-import { HeartPulse, Users, Briefcase, Bot } from 'lucide-react';
+import { HeartPulse, Users, Briefcase, MapPin } from 'lucide-react';
 import CountUpNumber from '@/components/ui/CountUpNumber';
 
 export default function MentalHealthPage() {
@@ -39,36 +39,39 @@ export default function MentalHealthPage() {
                             <div className={styles.iconWrapper}>
                                 <Users size={32} />
                             </div>
-                            <h3 className={styles.cardTitle}>Community Awareness</h3>
+                            <h3 className={styles.cardTitle}>Community Awareness Programmes</h3>
                             <p className={styles.cardText}>
-                                Targeted programs for MGNREGA workers, school children, and parents at Anganwadi centers to identify early signs of mental illness.
+                                Targeted programs for MGNREGA workers, Parents and caregivers of school children and adolescents, Self-Help group workers and Panchayat leaders.
                             </p>
                         </div>
                         <div className={styles.interventionCard}>
                             <div className={styles.iconWrapper}>
                                 <HeartPulse size={32} />
                             </div>
-                            <h3 className={styles.cardTitle}>Weekly Clinics</h3>
+                            <h3 className={styles.cardTitle}>Free Bi-Weekly Clinics</h3>
                             <p className={styles.cardText}>
-                                Specialized psychiatric care provided every Wednesday at Kasturba Hospital, ensuring consistent medication and counseling.
+                                Specialized Psychiatric Care, and provision of free medicines at Kasturba Hospital, ensuring regular treatment and monitoring of beneficiaries.
                             </p>
                         </div>
                         <div className={styles.interventionCard}>
                             <div className={styles.iconWrapper}>
                                 <Briefcase size={32} />
                             </div>
-                            <h3 className={styles.cardTitle}>Rehabilitation</h3>
+                            <h3 className={styles.cardTitle}>Counselling Services</h3>
                             <p className={styles.cardText}>
-                                Vocational training and support for patients to restart livelihoods (e.g., garment businesses), fostering independence.
+                                Counselling and mental health support services are available daily.
+                                <br />
+                                <br />
+                                Individual counselling, Family counselling, crisis intervention and mental health support services for caregivers of Residential Schools and Children&apos;s Homes.
                             </p>
                         </div>
                         <div className={styles.interventionCard}>
                             <div className={styles.iconWrapper}>
-                                <Bot size={32} />
+                                <MapPin size={32} />
                             </div>
-                            <h3 className={styles.cardTitle}>Innovations</h3>
+                            <h3 className={styles.cardTitle}>Community Outreach Services</h3>
                             <p className={styles.cardText}>
-                                Developing AI Chatbots to support adolescent mental health in regional languages (Tamil).
+                                Trained team of social workers and volunteers, act as a critical link between the community and the mental health programme by identifying the needs of beneficiaries and ensuring regular treatment through home visits.
                             </p>
                         </div>
                     </div>

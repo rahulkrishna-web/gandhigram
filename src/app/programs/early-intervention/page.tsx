@@ -5,7 +5,7 @@ import DonorCarousel from '@/components/home/DonorCarousel';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import galleryManifest from '@/data/early-intervention-gallery-manifest.json';
 import styles from './page.module.css';
-import { Activity, Puzzle, Mic, BookOpen, Smile, Gamepad2, Blocks, ClipboardCheck, Trees, IdCard, Gift, Stethoscope } from 'lucide-react';
+import { Activity, Puzzle, Mic, BookOpen, Smile, Blocks, ClipboardCheck, IdCard, Gift, Stethoscope, Ear, Dumbbell } from 'lucide-react';
 import CountUpNumber from '@/components/ui/CountUpNumber';
 
 export default function EarlyInterventionPage() {
@@ -30,9 +30,9 @@ export default function EarlyInterventionPage() {
 
                 {/* Interventions Cards */}
                 <section className={styles.section}>
-                    <h2 className={styles.heading}>Centre-Based Interventions</h2>
+                    <h2 className={styles.heading}>Home-Based and Centre-Based Interventions</h2>
                     <p className={styles.leadText} style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                        The Child Rehabilitation Centre at Kasturba Hospital offers comprehensive fee-free therapeutic services.
+                        The Child Rehabilitation Centre at Kasturba Hospital provides free rehabilitation services. A well-trained team of specialists and community workers offer home based rehabilitation and visit homes to support children in rural areas who cannot easily travel or afford to come to the centre.
                     </p>
                     <div className={styles.cardGrid}>
                         <div className={styles.interventionCard}>
@@ -121,20 +121,20 @@ export default function EarlyInterventionPage() {
                     <div className={styles.cardGrid}>
                         <div className={styles.interventionCard}>
                             <div className={styles.iconWrapper}>
-                                <Trees size={32} />
+                                <Ear size={32} />
                             </div>
-                            <h3 className={styles.cardTitle}>Sensory Park</h3>
+                            <h3 className={styles.cardTitle}>Audiology & Speech Assessment</h3>
                             <p className={styles.cardText}>
-                                A stimulating outdoor environment designed to enhance sensory processing.
+                                Well trained team of Audiologists and Speech Pathologists test hearing capability, speech therapy and referrals for Hearing-Aid placements and Cochlear Implants.
                             </p>
                         </div>
                         <div className={styles.interventionCard}>
                             <div className={styles.iconWrapper}>
-                                <Gamepad2 size={32} />
+                                <Dumbbell size={32} />
                             </div>
-                            <h3 className={styles.cardTitle}>Play Equipment</h3>
+                            <h3 className={styles.cardTitle}>Physiotherapy Equipment</h3>
                             <p className={styles.cardText}>
-                                Specialized equipment to encourage physical activity and social interaction.
+                                Specialized therapeutic equipment to assist in mobility training, muscle strengthening, and physical rehabilitation.
                             </p>
                         </div>
                         <div className={styles.interventionCard}>

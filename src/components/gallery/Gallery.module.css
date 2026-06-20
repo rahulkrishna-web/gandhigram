@@ -67,6 +67,7 @@
     font-weight: 500;
     color: #111827;
     transition: color 0.2s;
+    letter-spacing: normal;
 }
 
 .card:hover .title {
