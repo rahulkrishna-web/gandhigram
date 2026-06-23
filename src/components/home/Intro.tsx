@@ -36,7 +36,7 @@ const Intro = () => {
                     <div className={styles.content}>
                         <h2 className={styles.title}>Our <span className={styles.italicHighlight}>story</span></h2>
                         <p className={styles.description}>
-                            For over 25 years, the Gandhigram Foundation has been committed to tackling the greatest inequities in our world.
+                            For over 75 years, the Gandhigram Trust has been committed to tackling the greatest inequities in our world.
                         </p>
                     </div>
                 </div>
