@@ -15,11 +15,11 @@ const WhatIsHappening = () => {
                         <div className={styles.mainContent}>
                             <div className={styles.metaRow}>
                                 <span className={styles.badge}>
-                                    <HeartHandshake size={15} />
+                                    <HeartHandshake size={16} />
                                     Success Story
                                 </span>
                                 <div className={styles.locationTag}>
-                                    <MapPin size={14} />
+                                    <MapPin size={16} />
                                     <span>Oddanchathram, Dindigul District</span>
                                 </div>
                             </div>
@@ -53,25 +53,25 @@ const WhatIsHappening = () => {
 
                             <div className={styles.impactGrid}>
                                 <div className={styles.impactItem}>
-                                    <HeartHandshake size={16} className={styles.impactIcon} />
+                                    <HeartHandshake size={20} className={styles.impactIcon} />
                                     <span className={styles.impactLabel}>Partner</span>
                                     <span className={styles.impactValue}>DMHP</span>
                                 </div>
 
                                 <div className={styles.impactItem}>
-                                    <Building2 size={16} className={styles.impactIcon} />
+                                    <Building2 size={20} className={styles.impactIcon} />
                                     <span className={styles.impactLabel}>Facility</span>
                                     <span className={styles.impactValue}>ECRC, Oddanchathram</span>
                                 </div>
 
                                 <div className={styles.impactItem}>
-                                    <ShieldCheck size={16} className={styles.impactIcon} />
+                                    <ShieldCheck size={20} className={styles.impactIcon} />
                                     <span className={styles.impactLabel}>Action</span>
                                     <span className={styles.impactValue}>Rescue &amp; Crisis Care</span>
                                 </div>
 
                                 <div className={styles.impactItem}>
-                                    <Quote size={16} className={styles.impactIcon} />
+                                    <Quote size={20} className={styles.impactIcon} />
                                     <span className={styles.impactLabel}>Outcome</span>
                                     <span className={styles.impactValue}>Rehabilitation &amp; Recovery</span>
                                 </div>
