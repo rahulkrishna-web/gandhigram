@@ -1,265 +1,200 @@
 .section {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background-color: var(--bg-primary);
-    border-top: 1px solid rgba(210, 180, 140, 0.3);
-    border-bottom: 1px solid rgba(210, 180, 140, 0.3);
+    border-top: 1px solid rgba(210, 180, 140, 0.25);
+    border-bottom: 1px solid rgba(210, 180, 140, 0.25);
 }
 
 .container {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 .sectionHeader {
     text-align: center;
-    margin-bottom: 3.5rem;
-}
-
-.eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent-green);
-    background-color: rgba(85, 107, 47, 0.08);
-    padding: 0.4rem 1rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(85, 107, 47, 0.2);
-}
-
-.pulseDot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--accent-green);
-    display: inline-block;
+    margin-bottom: 1.75rem;
 }
 
 .sectionTitle {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 2.25rem;
     color: var(--text-primary);
-    margin: 0 0 1rem 0;
+    margin: 0;
     font-weight: 600;
     line-height: 1.2;
 }
 
-.sectionSubtitle {
-    font-family: var(--font-sans);
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    max-width: 650px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
 .card {
     background-color: #ffffff;
-    border: 1px solid rgba(210, 180, 140, 0.4);
-    border-radius: 16px;
-    padding: 3.5rem;
-    box-shadow: 0 10px 30px -10px rgba(75, 54, 33, 0.06);
-    position: relative;
-    overflow: hidden;
+    border: 1px solid rgba(210, 180, 140, 0.35);
+    border-radius: 14px;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 4px 20px -5px rgba(75, 54, 33, 0.05);
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-gold), var(--accent-green));
+.cardLayout {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 2.25rem;
+    align-items: stretch;
 }
 
-.cardHeader {
+.mainContent {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+.metaRow {
+    display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 1rem;
-    padding-bottom: 1.75rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(210, 180, 140, 0.25);
+    margin-bottom: 0.75rem;
 }
 
 .badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
     color: var(--accent-gold);
     background-color: rgba(218, 165, 32, 0.1);
-    padding: 0.4rem 0.9rem;
-    border-radius: 6px;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
 }
 
 .locationTag {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.35rem;
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     font-weight: 500;
 }
 
 .storyTitle {
     font-family: var(--font-serif);
-    font-size: 2.25rem;
+    font-size: 1.55rem;
     color: var(--text-primary);
     line-height: 1.3;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     font-weight: 600;
 }
 
-.articleBody {
+.paragraphs {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.75rem;
 }
 
 .paragraph {
     font-family: var(--font-sans);
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--text-primary);
     margin: 0;
+    opacity: 0.95;
 }
 
-.highlightQuote {
-    position: relative;
+.sidePanel {
     background-color: var(--bg-card);
-    border-left: 4px solid var(--accent-green);
-    border-radius: 0 12px 12px 0;
-    padding: 1.75rem 2rem 1.75rem 2.5rem;
-    margin: 0.5rem 0;
+    border: 1px solid rgba(210, 180, 140, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.quoteBox {
+    border-left: 3px solid var(--accent-green);
+    padding-left: 1rem;
 }
 
 .quoteText {
     font-family: var(--font-serif);
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     font-style: italic;
     color: var(--text-primary);
-    line-height: 1.6;
+    line-height: 1.55;
     margin: 0;
 }
 
 .impactGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
-    border-top: 1px solid rgba(210, 180, 140, 0.25);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
 }
 
 .impactItem {
-    background-color: var(--bg-card);
-    border: 1px solid rgba(210, 180, 140, 0.3);
-    border-radius: 10px;
-    padding: 1.25rem 1rem;
+    background-color: #ffffff;
+    border: 1px solid rgba(210, 180, 140, 0.25);
+    border-radius: 8px;
+    padding: 0.75rem 0.85rem;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    gap: 0.2rem;
 }
 
-.impactItem:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-gold);
-}
-
-.impactIconWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    background-color: rgba(85, 107, 47, 0.1);
+.impactIcon {
     color: var(--accent-green);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
 }
 
 .impactLabel {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
     color: var(--text-secondary);
 }
 
 .impactValue {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-primary);
-    line-height: 1.35;
+    line-height: 1.3;
 }
 
 @media (max-width: 900px) {
     .section {
-        padding: 4.5rem 0;
+        padding: 2.5rem 0;
     }
 
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
     }
 
     .sectionTitle {
-        font-size: 2.35rem;
+        font-size: 1.85rem;
     }
 
     .card {
-        padding: 2.25rem 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .cardLayout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .storyTitle {
-        font-size: 1.75rem;
+        font-size: 1.35rem;
     }
 
-    .paragraph {
-        font-size: 1.025rem;
-        line-height: 1.7;
-    }
-
-    .quoteText {
-        font-size: 1.1rem;
-    }
-
-    .impactGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
-}
-
-@media (max-width: 540px) {
-    .sectionTitle {
-        font-size: 2rem;
-    }
-
-    .impactGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .cardHeader {
+    .metaRow {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem;
     }
 }
