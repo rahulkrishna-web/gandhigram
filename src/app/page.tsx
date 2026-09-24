@@ -4,6 +4,7 @@ import VideoSection from "@/components/home/VideoSection";
 import Intro from "@/components/home/Intro";
 import StatsCarousel from "@/components/home/StatsCarousel";
 import Programs from "@/components/home/Programs";
+import WhatIsHappening from "@/components/home/WhatIsHappening";
 import Team from "@/components/home/Team";
 import CaseStudies from "@/components/home/CaseStudies";
 import NewsMarquee from "@/components/home/NewsMarquee";
@@ -19,6 +20,7 @@ export default function Home() {
       <Intro />
       <StatsCarousel />
       <Programs />
+      <WhatIsHappening />
       <Team />
       <DonorCarousel />
       <CaseStudies />
